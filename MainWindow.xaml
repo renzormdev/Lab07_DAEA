@@ -1,0 +1,19 @@
+﻿<Window x:Class="Demo07.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Facturas" Height="350" Width="525">
+    <Grid>
+        <Button Content="Listar" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100" Height="30" Click="ListarButton_Click" Margin="0,42,0,0"/>
+
+        <DataGrid Name="InvoicesDataGrid" AutoGenerateColumns="False" HorizontalAlignment="Center" VerticalAlignment="Top" Height="200" Width="500" Margin="0,92,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding InvoiceId}" Width="50"/>
+                <DataGridTextColumn Header="ID Cliente" Binding="{Binding CustomerId}" Width="100"/>
+                <DataGridTextColumn Header="Fecha" Binding="{Binding Date}" Width="150"/>
+                <DataGridTextColumn Header="Total" Binding="{Binding Total}" Width="100"/>
+                <DataGridTextColumn Header="Activo" Binding="{Binding Active}" Width="50"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
